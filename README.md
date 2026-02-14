@@ -1,4 +1,4 @@
-# NSO Loopback Service Demo
+# NSO Loopback Service
 
 Example Cisco NSO 6.4.x service package created using ncs-make-package.
 
