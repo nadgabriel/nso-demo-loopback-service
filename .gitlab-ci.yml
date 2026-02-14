@@ -1,1 +1,16 @@
-.
+stages:
+  - build
+  - test
+
+build_package:
+  stage: build
+  image: cisco-nso:6.4
+  script:
+    - make all
+
+unit_test:
+  stage: test
+  image: python:3.11
+  script:
+    - pip install pytest
+    - pytest packages/loopback-service/test/unit
