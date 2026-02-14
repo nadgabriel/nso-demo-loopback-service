@@ -1,0 +1,28 @@
+module loopback-service {
+  namespace "http://example.com/loopback-service";
+  prefix lbs;
+
+  import ietf-inet-types { prefix inet; }
+
+  container loopback-service {
+    list loopback {
+      key name;
+
+      leaf name {
+        type string;
+      }
+
+      leaf device {
+        type string;
+      }
+
+      leaf id {
+        type uint16;
+      }
+
+      leaf ip-address {
+        type inet:ipv4-address;
+      }
+    }
+  }
+}
